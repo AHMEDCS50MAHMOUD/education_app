@@ -6,6 +6,7 @@ class InputTextfield extends StatelessWidget {
   final int maxLines;
   final bool readOnly;
   final Widget? suffixIcon;
+   final bool ispassword;
   final Function()? onTap;
   final FormFieldValidator<String>? validate;
 
@@ -16,6 +17,7 @@ class InputTextfield extends StatelessWidget {
     this.maxLines = 1,
     this.readOnly = false,
     this.suffixIcon,
+    this.ispassword=false,
     this.onTap,
     this.validate,
   });
@@ -27,6 +29,7 @@ class InputTextfield extends StatelessWidget {
       maxLines: maxLines,
       readOnly: readOnly,
       validator: validate,
+       obscureText: ispassword,
       onTapOutside: (value) {
         FocusScope.of(context).unfocus();
       },
