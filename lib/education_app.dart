@@ -13,7 +13,7 @@ class EducationApp extends StatelessWidget {
         //'/': (context) => Homescreen(),
         '/Result': (context) => ResultScreen(),
        },*/
-        home: LoginScreen()  //ResultScreen()
+       // home: LoginScreen()  //ResultScreen()
     );
 
   }
