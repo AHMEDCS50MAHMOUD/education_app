@@ -1,3 +1,4 @@
+import 'package:education_app/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -12,7 +13,7 @@ class EducationApp extends StatelessWidget {
         //'/': (context) => Homescreen(),
         '/Result': (context) => ResultScreen(),
        },*/
-     //   home: SplashScreen()  //ResultScreen()
+        home: LoginScreen()  //ResultScreen()
     );
 
   }
