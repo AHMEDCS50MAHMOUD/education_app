@@ -4,11 +4,12 @@ import 'package:education_app/Widgets/input_lable.dart';
 import 'package:education_app/Widgets/input_textfield.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-   LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+   RegisterScreen({super.key});
 
   final emailCtrl = TextEditingController();
   final passCtrl = TextEditingController();
+  final fullnameCtrl = TextEditingController();
  final _formKey=GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,15 @@ class LoginScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-         Center( child: Text('Log in your', style: 
-         TextStyle(color: Colors.white, fontSize: 36,fontWeight: FontWeight.w600),),), 
-         SizedBox(height: 40,),
+         Center(
+           child: SizedBox(
+            width: 140,
+             child: Text('Create Account', 
+             textAlign: TextAlign.center,
+             style:  TextStyle(color: Colors.white, fontSize: 36,fontWeight: FontWeight.w600 ),),
+           ),
+         ), 
+         SizedBox(height: 30,),
          Padding(
          padding: const EdgeInsets.all(16),
         child: SingleChildScrollView(
@@ -43,14 +50,24 @@ class LoginScreen extends StatelessWidget {
                 InputTextfield(
                   hint: '••••••••••',
                   controller: passCtrl,
-                 ispassword: true,
+                  ispassword: true,
                   validate:ValidatorService.validatePassword ,
                   
                 ),
                
-                const SizedBox(height: 50),
+                const SizedBox(height: 16),
 
-               AccountBuuton(text:  'Log In', onPressed: (){
+                  InputLable(text: 'Full Name'),
+                InputTextfield(
+                  hint: 'desing ninja',
+                  controller: fullnameCtrl,
+                  validate:ValidatorService.validateName ,
+                  
+                ),
+                
+                const SizedBox(height: 30),
+
+               AccountBuuton(text:  'Create an account', onPressed: (){
                 if(_formKey.currentState!.validate()){
                   //perform login
                 }
