@@ -14,6 +14,9 @@ class EducationApp extends StatelessWidget {
         //'/': (context) => Homescreen(),
         '/Result': (context) => ResultScreen(),
        },*/
+
+
+       
        // home: RegisterScreen()  //ResultScreen()
     );
 
