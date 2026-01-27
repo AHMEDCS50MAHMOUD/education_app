@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:education_app/screens/notifications_screen.dart';
 
 
 class EducationApp extends StatelessWidget {
@@ -7,12 +8,14 @@ class EducationApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       /* initialRoute: '/',
        routes: {
         //'/': (context) => Homescreen(),
         '/Result': (context) => ResultScreen(),
        },*/
-     //   home: SplashScreen()  //ResultScreen()
+       home: NotificationsScreen(),
+       //ResultScreen()
     );
 
   }
