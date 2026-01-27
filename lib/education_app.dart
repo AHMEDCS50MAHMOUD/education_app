@@ -1,3 +1,4 @@
+import 'package:education_app/Screens/courses_screen.dart';
 import 'package:education_app/Screens/login_screen.dart';
 import 'package:education_app/Screens/register_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +17,8 @@ class EducationApp extends StatelessWidget {
        },*/
 
 
-       
-       // home: RegisterScreen()  //ResultScreen()
+
+        home: CoursesScreen()  //ResultScreen()
     );
 
   }
