@@ -89,12 +89,12 @@ class CoursesScreen extends StatelessWidget {
               Sectionheader(title: 'Courses'),
 
               SizedBox(
-                height: 200,
+                height: 210,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: cardList.length,
                   separatorBuilder: (context, index) =>
-                      const SizedBox(width: 0),
+                      const SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return HomeCard(
                       title: cardList[index].title,
@@ -102,8 +102,9 @@ class CoursesScreen extends StatelessWidget {
                       rating: cardList[index].rating,
                       hours: cardList[index].hours,
                       people: cardList[index].people,
-                      bgColor: cardList[index].bgColor,
+                      bColor: cardList[index].bgColor,
                       imageAsset: cardList[index].imageAsset,
+                      isfavorite: cardList[index].isFavorite,
                     );
                   },
                 ),
@@ -113,35 +114,35 @@ class CoursesScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Sectionheader(title: 'Lectures'),
               SizedBox(
-                height: 200,
+                height: 210,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: cardList.length,
                   separatorBuilder: (context, index) =>
-                      const SizedBox(width: 0),
+                      const SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return HomeCard(
-                      title: cardList[index].title,
-                      price: cardList[index].price,
-                      rating: cardList[index].rating,
-                      hours: cardList[index].hours,
-                      people: cardList[index].people,
-                      bgColor: cardList[index].bgColor,
-                      imageAsset: cardList[index].imageAsset,
+                      title: cardList[2-index].title,
+                      price: cardList[2-index].price,
+                      rating: cardList[2-index].rating,
+                      hours: cardList[2-index].hours,
+                      people: cardList[2-index].people,
+                      bColor: cardList[2-index].bgColor,
+                      imageAsset: cardList[2-index].imageAsset,
                     );
                   },
                 ),
               ),
 
               const SizedBox(height: 10),
-              Sectionheader(title: 'Lectures'),
+              Sectionheader(title: 'On Top'),
               SizedBox(
-                height: 200,
+                height: 210,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: cardList.length,
                   separatorBuilder: (context, index) =>
-                      const SizedBox(width: 0),
+                      const SizedBox(width: 10),
                   itemBuilder: (context, index) {
                     return HomeCard(
                       title: cardList[index].title,
@@ -149,7 +150,7 @@ class CoursesScreen extends StatelessWidget {
                       rating: cardList[index].rating,
                       hours: cardList[index].hours,
                       people: cardList[index].people,
-                      bgColor: cardList[index].bgColor,
+                      bColor: cardList[index].bgColor,
                       imageAsset: cardList[index].imageAsset,
                     );
                   },
@@ -159,6 +160,7 @@ class CoursesScreen extends StatelessWidget {
           ),
         ),
       ),
+      //bottomNavigationBar: ,
     );
   }
 }

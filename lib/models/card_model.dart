@@ -1,5 +1,7 @@
 
-import 'dart:ui';
+
+
+import 'package:flutter/material.dart';
 
 class CardModel {
  final String title;
@@ -9,6 +11,7 @@ class CardModel {
   final String people;
   final Color bgColor;
   final String imageAsset; 
+  final bool isFavorite;
   
 
 CardModel({
@@ -19,37 +22,38 @@ CardModel({
     required this.people,
     required this.bgColor,
     required this.imageAsset,
-   
+    this.isFavorite = false,
   });
 }
   List<CardModel> cardList = [
     CardModel(
       title: 'UX/UI designer',
-      price: '\$800',
+      price: '800\$',
       rating: '4.8',
-      hours: '10h',
-      people: '120',
-      bgColor: Color(0xFF414141),
-      imageAsset: 'assets/images/uxui.jpg',
+      hours: '10Hours',
+      people: '12k People',
+      bgColor: Color(0xFFD2FF1F),
+      imageAsset: 'assets/images/29.png',
+      isFavorite: true,
     ),
   
     CardModel(
       title: 'SMM & Marketing',
-      price: '\$39.99',
+      price: '39.99\$',
       rating: '4.7',
-      hours: '15h',
-      people: '180',
-      bgColor: Color(0xFF414141),
-      imageAsset: 'assets/images/marketing.jpg',
+      hours: '15Hours',
+      people: '10k People',
+      bgColor: Color(0xFFFF825C),
+      imageAsset: 'assets/images/30.png',
     ),
     CardModel(
       title: 'Game Dev',
-      price: '\$35.99',
+      price: '35.99\$',
       rating: '4.6',
-      hours: '25h',
-      people: '300',
-      bgColor: Color(0xFF414141),
-      imageAsset: 'assets/images/gamedev.jpg',
+      hours: '25Hours',
+      people: '19k People',
+      bgColor: Color(0xFFDCC1FF),
+      imageAsset: 'assets/images/39.png',
     )
     
     /*TaskModel(
