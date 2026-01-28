@@ -1,5 +1,6 @@
 import 'package:education_app/Widgets/filter_continer.dart';
 import 'package:education_app/Widgets/home_card.dart';
+import 'package:education_app/Widgets/nav_bar.dart';
 import 'package:education_app/Widgets/sectionheader.dart';
 import 'package:education_app/models/card_model.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,9 @@ class CoursesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        key: UniqueKey(),
         backgroundColor: Colors.transparent,
-        elevation: 0,
+      
         actions: [
           Stack(
             children: [
@@ -40,8 +42,10 @@ class CoursesScreen extends StatelessWidget {
             ],
           ),
         ],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        title: 
+        Row(
+          //crossAxisAlignment: CrossAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: const [
             Row(
               children: [
@@ -63,6 +67,8 @@ class CoursesScreen extends StatelessWidget {
           ],
         ),
         centerTitle: false,
+        automaticallyImplyLeading: false
+
       ),
       backgroundColor: Color(0xFF1A1A1A),
       body: SingleChildScrollView(
@@ -160,7 +166,7 @@ class CoursesScreen extends StatelessWidget {
           ),
         ),
       ),
-      //bottomNavigationBar: ,
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

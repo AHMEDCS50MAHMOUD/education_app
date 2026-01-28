@@ -1,3 +1,4 @@
+import 'package:education_app/Screens/courses_screen.dart';
 import 'package:education_app/Screens/job_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,16 @@ class NavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const Icon(Icons.home_outlined, color: Colors.white, size: 28),
+             InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CoursesScreen()),
+                );
+              },
+              child: const Icon(Icons.home_outlined, color: Colors.white, size: 28),
+            ),
+            
             const Icon(Icons.search, color: Colors.grey, size: 28),
             const Icon(Icons.hexagon_outlined, color: Colors.grey, size: 28),
             InkWell(

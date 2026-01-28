@@ -71,6 +71,7 @@ class _JopScreenState extends State<JobScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        //key: UniqueKey(),
         backgroundColor: Colors.black,
         title: const Text('Career',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
