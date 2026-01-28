@@ -1,4 +1,4 @@
-import 'package:education_app/widgets/notification_message.dart';
+import 'package:education_app/Widgets/notification_message.dart';
 import 'package:flutter/material.dart';
 
 
