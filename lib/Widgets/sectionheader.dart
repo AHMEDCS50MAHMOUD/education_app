@@ -17,6 +17,6 @@ class Sectionheader extends StatelessWidget {
           Expanded(child: Divider(color: Colors.grey.shade800, thickness: 1)),
         ],
       ),
-    );;
+    );
   }
 }
