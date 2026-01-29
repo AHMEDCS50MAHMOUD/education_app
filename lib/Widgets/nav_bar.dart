@@ -1,5 +1,6 @@
 import 'package:education_app/Screens/courses_screen.dart';
 import 'package:education_app/Screens/job_screen.dart';
+import 'package:education_app/Screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
@@ -39,7 +40,17 @@ class NavBar extends StatelessWidget {
               },
               child: const Icon(Icons.cases_outlined, color: Colors.grey, size: 28),
             ),
-            const Icon(Icons.person_outline, color: Colors.grey, size: 28),
+
+             InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProfileScreen()),
+                );
+              },
+              child: const Icon(Icons.person_outline, color: Colors.grey, size: 28),
+            ),
+           
           ],
         ),
       ),

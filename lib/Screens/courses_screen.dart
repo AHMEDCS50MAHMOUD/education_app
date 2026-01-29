@@ -1,6 +1,8 @@
+import 'package:education_app/Screens/notifications_screen.dart';
 import 'package:education_app/Widgets/filter_continer.dart';
 import 'package:education_app/Widgets/home_card.dart';
 import 'package:education_app/Widgets/nav_bar.dart';
+import 'package:education_app/Widgets/noftiIcon_block.dart';
 import 'package:education_app/Widgets/sectionheader.dart';
 import 'package:education_app/models/card_model.dart';
 import 'package:flutter/material.dart';
@@ -16,30 +18,15 @@ class CoursesScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
       
         actions: [
-          Stack(
-            children: [
-              const Padding(
-                padding: EdgeInsets.only(right: 10),
-                child: Icon(
-                  Icons.notifications_none_outlined,
-                  size: 24,
-                  color: Color(0XFF6C6C6C),
-                ),
-              ),
-              Positioned(
-                right: 22,
-                top: 5,
-                child: Container(
-                  height: 8,
-                  width: 8,
-                  padding: const EdgeInsets.all(1),
-                  decoration: BoxDecoration(
-                    color: Colors.yellow, // The yellow circle
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                ),
-              ),
-            ],
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NotificationsScreen()),
+              );
+            },
+            child:NoftiiconBlock(), 
+         
           ),
         ],
         title: 

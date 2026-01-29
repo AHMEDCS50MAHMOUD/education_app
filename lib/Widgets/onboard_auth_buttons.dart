@@ -18,10 +18,10 @@ class OnboardAuthButtons extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xffF5F378),
-            foregroundColor: Colors.black,
+            //foregroundColor: Colors.black,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25),
-            ),
+            borderRadius: BorderRadius.circular(25),
+          ),
           ),
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
@@ -30,6 +30,7 @@ class OnboardAuthButtons extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
+                 color: Color(0XFF1A1A1A)
               ),
             ),
           ),
@@ -43,11 +44,11 @@ class OnboardAuthButtons extends StatelessWidget {
             );
           },
           style: OutlinedButton.styleFrom(
-            foregroundColor: Colors.black,
+            //foregroundColor: Colors.black,
             backgroundColor: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25),
-            ),
+           shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(25),
+          ),
           ),
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
@@ -56,6 +57,7 @@ class OnboardAuthButtons extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
+                color: Color(0XFF1A1A1A)
               ),
             ),
           ),
