@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class AccountBuuton extends StatelessWidget {
+class AccountButton extends StatelessWidget {
   final String text;
   final void Function()? onPressed;
-  const AccountBuuton({super.key, required this.text, this.onPressed});
+  const AccountButton({super.key, required this.text, this.onPressed});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
