@@ -8,7 +8,7 @@ class EducationApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'GentiumBookPlus'),
+      theme: ThemeData(fontFamily: 'GentiumBookPlus',),
       home: SplashScreen(),
     );
   }

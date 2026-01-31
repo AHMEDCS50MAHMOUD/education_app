@@ -1,6 +1,6 @@
 import 'package:education_app/Screens/courses_screen.dart';
 import 'package:education_app/Services/validator_service.dart';
-import 'package:education_app/Widgets/account_buuton.dart';
+import 'package:education_app/Widgets/account_button.dart';
 import 'package:education_app/Widgets/input_lable.dart';
 import 'package:education_app/Widgets/input_textfield.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +16,16 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF1A1A1A),
+       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        //elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -71,7 +81,7 @@ class RegisterScreen extends StatelessWidget {
 
                     const SizedBox(height: 30),
 
-                    AccountBuuton(
+                    AccountButton(
                       text: 'Create an account',
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {

@@ -85,10 +85,13 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   fonts:
-    - family: Berkshire
-    - family: GentiumBookPlus
-      fonts:
-        - asset: assets/fonts/BerkshireSwash-Regular.ttf
-        - asset: assets/fonts/GentiumBookPlus-Bold.ttf
+  - family: Berkshire
+    fonts:
+      - asset: assets/fonts/BerkshireSwash-Regular.ttf
+  - family: GentiumBookPlus
+    fonts:
+      - asset: assets/fonts/GentiumBookPlus-Bold.ttf
+  
+        
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
