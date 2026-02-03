@@ -1,6 +1,8 @@
 import 'package:education_app/Widgets/notification_message.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/nav_bar.dart';
+
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({super.key});
@@ -38,26 +40,7 @@ class NotificationsScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-        child: Container(
-          height: 60,
-          decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(25),
-          ),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Icon(Icons.home_outlined, color: Colors.white),
-              Icon(Icons.search, color: Colors.grey),
-              Icon(Icons.hexagon_outlined, color: Colors.grey),
-              Icon(Icons.cases_outlined, color: Colors.grey),
-              Icon(Icons.person_outline, color: Colors.grey),
-            ],
-          ),
-        ),
-      )
+      bottomNavigationBar: const NavBar(),
     );
   }
 }
